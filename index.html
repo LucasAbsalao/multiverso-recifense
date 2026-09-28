@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiverso Recife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="tela-inicial">
+        <h1 style="margin-bottom: 30px;">Multiverso Recife</h1>
+        <!-- O botão começa desabilitado até os arquivos JSON carregarem -->
+        <button id="btn-iniciar" onclick="iniciarApp()" disabled>Carregando multiverso...</button>
+    </div>
+
+    <div id="app">
+        <img id="imagem-fundo" src="" alt="Recife Multiverso">
+        
+        <div id="now-playing">
+            <div id="np-titulo">Carregando...</div>
+            <div id="np-fusao"></div>
+            <div id="np-instrumentos"></div>
+        </div>
+
+        <button class="seta" id="seta-esq" onclick="mudarDestino(-1)">&#10094;</button>
+        <button class="seta" id="seta-dir" onclick="mudarDestino(1)">&#10095;</button>
+
+        <audio id="player-audio" loop></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
